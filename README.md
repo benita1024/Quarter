@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Quarter
 
-## Getting Started
+> A sophisticated product discovery platform for men's quarter-zip sweaters. Compare prices, explore styles, and find your perfect fit across premium retailers.
 
-First, run the development server:
+##  Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Quarter aggregates men's quarter-zip sweaters from top fashion retailers into a single, beautifully designed platform. Built with a focus on quality, affordability, and discovery, Quarter helps style-conscious men in their 20s find the perfect quarter-zip without endless browsing.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Design Philosophy:** A blend of editorial minimalism, refined elegance, and timeless prep aesthetic.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+##  Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Smart Aggregation**: Real-time product data from multiple premium retailers
+- **Advanced Filtering**: Filter by price, brand, material, color, and style
+- **Price Comparison**: See the best deals across all retailers
+- **Material Focus**: Highlight cashmere, merino wool, cotton, and performance fabrics
+- **Affiliate Integration**: Seamless shopping experience with direct retailer links
+- **Responsive Design**: Beautiful on desktop, tablet, and mobile
 
-## Learn More
+##  Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+**Frontend:**
+- React 18 with TypeScript
+- Next.js 14 (App Router)
+- Tailwind CSS
+- Shadcn/ui components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Backend:**
+- FastAPI (Python 3.11+)
+- PostgreSQL (product catalog)
+- Redis (caching & rate limiting)
+- Celery (async job processing)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**APIs & Integrations:**
+- ShopStyle Collective API
