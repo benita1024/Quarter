@@ -13,6 +13,7 @@ export default function Hero() {
           </h1>
           <p className="text-lg text-charcoal-600 leading-relaxed">
             Curated from the finest menswear brands. Compare prices, discover styles, and find your perfect fit.
+            Join the movement. 
           </p>
         </div>
 

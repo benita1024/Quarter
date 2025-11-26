@@ -9,8 +9,21 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const handleClick = () => {
+    // Open product URL in new tab
+    window.open(product.productUrl, '_blank', 'noopener,noreferrer');
+  };
+
+  const handleShopClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent card click
+    window.open(product.productUrl, '_blank', 'noopener,noreferrer');
+  };
+
   return (
-    <div className="group bg-white rounded-sm overflow-hidden border border-sand-200 transition-all hover:shadow-xl hover:-translate-y-1 cursor-pointer">
+    <div 
+      onClick={handleClick}
+      className="group bg-white rounded-sm overflow-hidden border border-sand-200 transition-all hover:shadow-xl hover:-translate-y-1 cursor-pointer"
+    >
       {/* Product Image */}
       <div className="relative aspect-[4/5] overflow-hidden bg-sand-100">
         <Image
@@ -59,21 +72,17 @@ export default function ProductCard({ product }: ProductCardProps) {
             )}
           </div>
 
-          {/* Color Dots */}
-          <div className="flex gap-1.5">
-            {product.colors.slice(0, 3).map((color, index) => (
-              <div
-                key={index}
-                className="w-5 h-5 rounded-full border border-sand-300 hover:scale-110 transition-transform cursor-pointer"
-                style={{ backgroundColor: color }}
-                title={color}
-              />
-            ))}
+          {/* Retailer */}
+          <div className="text-xs text-gray-500">
+            {product.retailer}
           </div>
         </div>
 
         {/* Shop Button */}
-        <button className="w-full bg-charcoal-800 text-white py-3 text-sm font-semibold tracking-widest uppercase hover:bg-charcoal-900 transition-colors flex items-center justify-center gap-2 group">
+        <button 
+          onClick={handleShopClick}
+          className="w-full bg-charcoal-800 text-white py-3 text-sm font-semibold tracking-widest uppercase hover:bg-charcoal-900 transition-colors flex items-center justify-center gap-2 group"
+        >
           Shop Now
           <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
         </button>

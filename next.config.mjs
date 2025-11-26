@@ -4,10 +4,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com',
+        hostname: '**', // Allow all HTTPS hostnames
       },
     ],
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig
